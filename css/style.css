@@ -68,11 +68,13 @@ background-color: rgb(135, 225, 231);
   background-color: rgb(0, 0, 105);
 }
 
-.jumbotron .title{
+.jumbotron .content{
   width: 55%;
   height: 79%;
   background-color: rgb(223, 111, 238);
 }
+
+/* main  */
 
 .layer1 ,
 .layer3{
@@ -83,42 +85,37 @@ background-color: rgb(135, 225, 231);
 
 .layer1 > div,
 .layer3 > div{
+display: flex;
+flex-wrap: wrap;
+width: 75%;
+height: 79%;
+border: solid 1px black;
+}
+
+.layer2{
+  height: 400px;
+  background-color: rgb(158, 158, 87);
+
+}
+
+.layer2 > div{
   display: flex;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
   width: 75%;
   height: 79%;
   border: solid 1px black;
 }
 
-.layer1 > div > div:first-child, 
-.layer2 > div > div:first-child,
-.layer3 > div > div:first-child{
-width: calc(100% *0.6);
+.image {
+  width: calc(100% *0.6);
   background-color: aqua;
 }
 
-.layer1 > div > div:last-child,
-.layer2 > div > div:last-child,
-.layer3 > div > div:last-child{
+.text {
   width: calc(100% * 0.4);
   background-color: antiquewhite;
 }
-
-  
-  .layer2{
-    height: 400px;
-    background-color: rgb(158, 158, 87);
-  
-  }
-
-  .layer2 > div{
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-    width: 75%;
-    height: 79%;
-    border: solid 1px black;
-  }
 
   .layer4{
     height: 700px;
@@ -126,10 +123,28 @@ width: calc(100% *0.6);
   
   }
   
-  .layer4 > div,
+  .layer4 > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 75%;
+    height: 79%;
+    border: solid 1px black;
+
+  }
+
+  .image2{
+    width: 100%;
+    height: 20%;
+    background-color: aliceblue;
+  }
+
+
   .layer5 > div{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
     width: 75%;
     height: 79%;
     border: solid 1px black;
@@ -141,14 +156,14 @@ width: calc(100% *0.6);
   
   }
 
-  
-.layer5 > div > div:first-child { 
+
+.layer5 .top { 
   width: calc(100% *0.25);
   background-color: aqua;
   border: 1px solid white;
 }
 
-.layer5 > div > div:not(div:first-child) { 
+.layer5 .col-menu { 
   width: calc(100% *0.1875);
   background-color: rgb(14, 121, 121);
   border: 1px solid white;
